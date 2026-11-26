@@ -1,0 +1,17 @@
+{
+  "human": "You",
+  "port": 18400,
+  "channels": ["general", "build", "garden"],
+  "data_dir": "data",
+  "vault_dir": "",
+  "max_agent_hops": 3,
+  "history_chars": 24000,
+  "members": [
+    {"name": "You",    "type": "human"},
+    {"name": "Nova",   "type": "model", "url": "http://127.0.0.1:8080/v1/chat/completions", "model": "local",
+     "soul": "examples/nova.md", "garden": true, "does_not_see": []},
+    {"name": "Sage",   "type": "model", "url": "http://127.0.0.1:8080/v1/chat/completions", "model": "local",
+     "soul": "examples/sage.md", "garden": true},
+    {"name": "Claude", "type": "agent", "about": "An outside agent (Claude Code) that joins through the API or CLI."}
+  ]
+}
